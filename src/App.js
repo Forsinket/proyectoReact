@@ -1,14 +1,24 @@
+import { TodoItem } from './TodoItem';
+import { TodoList } from './TodoList';
+import { TodoSearch } from './TodoSearch';
+import { TodoCounter } from './TodoCounter';
 import logo from './platzi.webp';
 import './App.css';
+import { TodoButton } from './TodoButton';
 
 function App() {
   return (
     <div className="App">
+    <TodoCounter />
+    <TodoSearch />
 
-    <TodoItem />
-    <TodoItem />
-    <TodoItem />
-    <TodoItem />
+    <TodoList>
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
+    </TodoList>
+
+    <TodoButton />
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -28,17 +38,9 @@ function App() {
   );
 }
 
-function TodoItem(){
-  return (
-    <li>
-      <span> V </span>
-      <p> Texto actividad </p>
-      <span> X </span>
-    </li>
-
-  );
 
 
-}
+
+
 
 export default App;
